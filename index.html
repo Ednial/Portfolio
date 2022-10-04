@@ -27,10 +27,56 @@
   <title>Document</title>
 </head>
 <body>
-  <a href="https://www.amazon.com/">Back to amazon</a>
+  <style>
+    .B1{
+      background-color: rgb(255, 216, 20);
+      border:none;
+      height: 30px;
+      width: 100px;
+      border-radius: 15px;             /*HALF of height*/                   
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.15s,color 0.15; /*Add time to propieties that seems smoothly*/
+    }
+    .B1:hover{ /*HOVER(flotar) is a pseudo class, Add transitions when cursor is hovering botton*/
+      opacity: 0.5;
+      /*Opacity works since 0 till 1, 0 that means completly transparent and 1 means without opacity */
+    }
+    .B1:active{ /*ACTIVE pseudo class that add transitions when we click on whatever element*/
+      opacity: 1;
+      background-color: black;
+      color: aliceblue;
+    }
+    .B2{
+      background-color: rgb(255, 164, 28);
+      border: none;
+      border-width: 1px;
+      height: 30px;
+      width: 100px;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .B2:hover{
+      box-shadow: 5px,5px,5px rgba(0, 0, 0, 0.15); /*RGBA-->Red,Green,Blue,Alpha(opacity)*/
+      /*Creates a shadow, each value means:
+      1. position X
+      2. position Y
+      3. shadow's bluer
+      4. shadow's color*/
+    }
+    .link{
+      color: rgb(0,113,133);
+    }
+    .cash{
+      color: rgb(0,118,0);
+    }
+  </style>
+  <a href="https://www.amazon.com/" class="link">Back to amazon</a>
   <p>Nike black running shoes</p>
-  <p>$39 - in stock.</p>
+  <p class="cash">$39 - in stock.</p>
   <p>Free delivery tomorrow morning.</p>
-  <button>Add to car</button><button>Buy now</button>
+  <button class="B1">Add to car</button>
+  <button class="B2">Buy now</button>
 </body>
 </html>
